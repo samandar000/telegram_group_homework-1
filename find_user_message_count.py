@@ -13,7 +13,7 @@ def find_user_message_count(data: dict, users_id: str)->dict:
     """
     users_msgs = {}
     for i in users_id:
-        users_msgs[i] = 0
+        users_msgs[i] = 1
     for msg in data['messages']:
         id = msg.get('from_id',False)
         if id:
