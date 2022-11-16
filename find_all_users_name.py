@@ -17,5 +17,5 @@ def find_all_users_name(data: dict)->list:
             user.append(i['from'])
         
     return user
-d=read_data(read_data)
+
 
