@@ -11,6 +11,8 @@ def find_all_users_id(data: dict)->list:
     """
     id = []
     for i in data['messages']:
-        if i.get('actor_id'):
-            id.append(i['actor_id'])
+        if i.get("actor_id") and i.get('actor_id') not in id:
+            id.append(i['actor'] )
+        if i.get('from_id') and i.get('from_id') not in id:
+            id.append(i['from'])
     return id
